@@ -1,0 +1,161 @@
+.upload {
+  --border-color: #dcdfe6;
+  --font-color: #8c939d;
+  --primary-color: #409eff;
+  --danger-color: #eb685e;
+}
+
+.upload * {
+  box-sizing: border-box;
+}
+
+.upload {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.upload .preview {
+  object-fit: contain;
+  z-index: 1;
+}
+
+.upload > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.upload > div {
+  display: none;
+  z-index: 2;
+}
+
+.upload.select .upload-select {
+  display: block;
+}
+.upload.select .preview {
+  display: none;
+}
+
+.upload.progress .upload-progress {
+  display: block;
+}
+
+.upload.result .upload-result {
+  display: block;
+}
+
+.upload-select {
+  border-radius: inherit;
+  border: 1px dashed var(--border-color);
+  cursor: pointer;
+}
+.upload-select::before,
+.upload-select::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--font-color);
+  transform: translate(-50%, -50%);
+}
+.upload-select::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.upload-select input {
+  display: none;
+}
+.upload-select:hover {
+  border-color: var(--primary-color);
+}
+
+.upload-progress {
+  background: #00000080;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 90%;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+}
+.progress-bar::before {
+  counter-reset: progress var(--percent);
+  content: counter(progress) '%';
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+}
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  border-radius: inherit;
+  width: calc(1% * var(--percent));
+  height: 100%;
+  background: var(--primary-color);
+}
+.upload-progress::after {
+  content: '文件上传中...';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 5px);
+  white-space: nowrap;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 12px;
+}
+.upload button {
+  border: none;
+  outline: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  user-select: none;
+}
+.progress-bar button {
+  left: 50%;
+  position: absolute;
+  top: 25px;
+  transform: translateX(-50%);
+}
+.progress-bar button:hover {
+  color: var(--danger-color);
+}
+
+.upload-result {
+  border: 1px dashed var(--border-color);
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.upload-result button {
+  width: 30px;
+  height: 20px;
+  background: var(--font-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 2px;
+  color: #fff;
+}
+.upload-result button:hover {
+  background: var(--danger-color);
+}

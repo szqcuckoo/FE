@@ -1,0 +1,8 @@
+POST /api/chat HTTP/1.1
+Host: study.duyiedu.com
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQzYzcxMTFjOTAxMzFjMTRjMmIzNSIsImlhdCI6MTY3NzMzMzQxMiwiZXhwIjoxNjc3OTM4MjEyfQ.crzHH4HhfYmWgHb9L8RzVhSCT206MQy_IoUWmCtJfKc
+
+{
+  "content": "讲个笑话"
+}

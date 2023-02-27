@@ -1,0 +1,8 @@
+POST /api/user/login HTTP/1.1
+Host: study.duyiedu.com
+Content-Type: application/json
+
+{
+  "loginId":"admin1",
+  "loginPwd":"123123"
+}
