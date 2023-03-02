@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>扫雷</title>
+  </head>
+  <body>
+    <!-- 外层容器 -->
+    <div class="container">
+      <!-- 标题 -->
+      <h1>扫雷</h1>
+      <!-- 游戏难度选择 -->
+      <div class="level">
+        <button class="active">easy</button>
+        <button>normal</button>
+        <button>hard</button>
+      </div>
+      <div class="info">总雷数：<span class="mainNum">10</span></div>
+      <div class="info">插旗数：<span class="flagNum">0</span></div>
+      <!-- 扫雷区域 -->
+      <div class="mineArea"></div>
+    </div>
+    <script src="../js//config.js"></script>
+    <script src="../js//tool.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
