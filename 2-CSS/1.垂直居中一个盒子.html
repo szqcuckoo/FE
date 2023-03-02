@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .f {
+        width: 300px;
+        height: 400px;
+        background-color: yellow;
+        overflow: hidden;
+        /* position: relative; */
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* margin: 0 auto; */
+        margin-left: 150px;
+        margin-top: 200px;
+        transform: translate(-50%, -50%);
+        /* position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -50px 0 0 -50px; */
+        /* margin: 150px 100px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f">
+      <div class="box"></div>
+    </div>
+    <!-- 
+      1. 直接使用 margin，
+      2. 使用 flex
+      3. 使用 transform: 子盒子平移父盒子的百分之50，在使用 transform 平移 -50%
+      4. 使用定位
+
+
+     -->
+  </body>
+</html>

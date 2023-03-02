@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 800px;
+      height: 800px;
+      display: flex;
+    }
+    
+    .left {
+      width: 200px;
+      height: 200px;
+      float: left;
+      background-color:red;
+    }
+
+    .right {
+      /* width: auto; */
+      height: 200px;
+      /* flex: 1; */
+      overflow: hidden;
+      /* margin-left: 200px; */
+      background-color: blue;
+    }
+
+    .l {
+      width: 100px;
+      height: 100px;
+      float: left;
+      background-color:red;
+
+    }
+
+    .c {
+      flex: 1;
+      background-color: yellow;
+    }
+
+    .r {
+      width: 100px;
+      height: 100px;
+      float: right;
+      background-color: blue;
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- <div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div> -->
+  <div class="box">
+    <div class="l"></div>
+    <div class="c"></div>
+    <div class="r"></div>
+  </div>
+</body>
+</html>
