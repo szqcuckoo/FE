@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数组去重</title>
+  </head>
+  <body>
+    <script>
+      function type(target) {
+        let ret = typeof target;
+        const template = {
+          "[object Array]": "array",
+          "[object Object]": "object",
+          "[object Number]": "number - object",
+          "[object Boolean]": "boolean - object",
+          "[object String]": "string - object",
+        };
+        if (target === null) return null;
+        else if (ret == "object") {
+          // arr obj 包装类
+          let str = Object.prototype.toString.call(target);
+          return template[str];
+        } else {
+          return ret;
+        }
+      }
+
+      const arr = [1, 21, 34, 4, 5, 6, 8, 8, 8, 9, 9, 9, 1];
+      Array.prototype.unique = function () {
+        let temp = {};
+        let arr = [];
+        let len = this.length;
+        for (let i = 0; i < len; i++) {
+          if(!temp[this[i]]) {
+            temp[this[i]] = 'abc'
+            arr.push(this[i])
+          }
+        }
+        return arr;
+      };
+
+      console.log(arr.unique())
+    </script>
+  </body>
+</html>
