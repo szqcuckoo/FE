@@ -1,10 +1,10 @@
 {
-  "name": "1-前端部署",
+  "name": "fedeployer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "serve . -p 3000"
+    "sta": "serve . -p 3000"
   },
   "keywords": [],
   "author": "",
